@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="circum"></h1>
+    <label>
+        Enter the radius
+    </label>
+    <input id="t-radius">
+    <button id="submit">
+        submit
+    </button>
+    <script>
+        const PI = 3.141592;
+        let radius;
+        let circumference;
+        document.getElementById('submit').onclick = function () {
+            radius = document.getElementById('t-radius').value;
+            radius = Number(radius)
+            circumference = 2 * PI * radius
+            document.getElementById('circum').textContent = `Circumferance will be ${circumference}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .line {
+            display: flexbox;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 id="checker">Enter your age </h1>
+    <label>
+        Write your age
+    </label>
+
+    <input id="t_licence">
+
+    <button id="send">
+        send
+    </button>
+
+
+
+    <div class="line">
+
+        <input type="radio" id="Master_card_Btn" name="card">
+
+        <label for="Master_card_Btn">Master Card</label>
+
+        <input type="radio" id="Visa_Btn" name="card">
+
+        <label for="Visa_Btn">Visa</label>
+
+        <input type="radio" id="Paypal_Btn" name="card">
+
+        <label for="Paypal_Btn">Paypal</label>
+
+        <br>
+        <br>
+
+        <button id="submit">
+            Submit
+        </button>
+
+        <p id="textElement" style="font-size: 35px;"></p>
+
+        <p id="AgeResult"></p>
+
+        <p id="PaymentResult"></p>
+    </div>
+    <script>
+
+
+        const t_licence = document.getElementById('t_licence');
+
+        const send = document.getElementById('send');
+
+        const textElement = document.getElementById('textElement');
+
+        const Visa_Btn = document.getElementById("Visa_Btn");
+
+        const Paypal_Btn = document.getElementById("Paypal_Btn");
+
+        const Master_card_Btn = document.getElementById("Master_card_Btn");
+
+        const submit = document.getElementById("submit");
+
+        const AgeResult = document.getElementById("AgeResult");
+
+        const PaymentResult = document.getElementById("PaymentResult");
+
+        let age;
+        send.onclick = function () {
+
+            age = t_licence.value;
+
+            age = Number(age);
+
+            console.log(age);
+
+
+            if (age >= 12) {
+                AgeResult.textContent = `You are old enough to have a bank account`;
+
+            }
+
+            else {
+                AgeResult.textContent = `You must be 12+,to get a bank account.`;
+            }
+        }
+
+        submit.onclick = function () {
+            if (Master_card_Btn.checked) {
+                PaymentResult.textContent = `You are paying with Master card`
+
+            }
+            else if (Visa_Btn.checked) {
+                PaymentResult.textContent = `You are paying with Visa`
+
+            }
+            else if (Paypal_Btn.checked) {
+                PaymentResult.textContent = ` You are paying with paypal`
+            }
+            else {
+                PaymentResult.textContent = `You must select a payment type`
+            }
+        }
+
+    </script>
+</body>
+
+</html>

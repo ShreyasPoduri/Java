@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <Center>
+        <h1 id="counter"></h1>
+        <button id="B-Dec">
+            Decrease
+        </button>
+
+        <button id="B-Reset">
+            Reset
+        </button>
+
+        <button id="B-inc">
+            Increase
+        </button>
+    </Center>
+
+    <script>
+       
+        let number = 1;
+        number = Number(number);
+
+        document.getElementById('B-inc').onclick = function () {
+            number += 1;
+            document.getElementById("counter").textContent = `${number}`;
+        }
+
+        document.getElementById('B-Dec').onclick = function () {
+            number -= 1;
+            document.getElementById("counter").textContent = `${number}`;
+        }
+
+        document.getElementById('B-Reset').onclick = function () {
+            number = 1;
+            document.getElementById("counter").textContent = `${number}`;
+        }
+        
+    </script>
+</body>
+
+</html>

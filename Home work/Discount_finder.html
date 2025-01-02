@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Discount </h1>
+    <label>
+        Write your amount
+    </label>
+    <input id="t_price">
+    <button id="submit">
+        submit
+    </button>
+    <p id="textElement" style="font-size: 35px;"></p>
+    <script>
+        const t_price = document.getElementById('t_price');
+
+        const submit = document.getElementById('submit');
+
+        const textElement = document.getElementById('textElement');
+
+        let price;
+
+        let discount;
+        let price_after_discount;
+
+
+        submit.onclick = function () {
+
+            price = t_price.value;
+
+            price = Number(price);
+
+            discount = price >= 200 ? 20 : 10;
+
+            price_after_discount = price - price * (discount / 100);
+
+            textElement.textContent = `You have got a discount of ${discount} %,your new price is
+            ${price_after_discount}kr`;
+        }
+   
+    </script>
+</body>
+
+</html>

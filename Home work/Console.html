@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .changeMe {
+            height: 400px;
+            width: 400px;
+            margin: 20px;
+            background: red;
+        }
+    </style>
+    <title>Sample projects</title>
+</head>
+
+<body>
+   <h2> Welcome to web development</h2>
+    <br>        
+<label>Username: </label>
+<input  id="MyText">
+<button id="mySubButton">Submit</button>
+    <p id="para">
+        <center>
+            <button>Click me</button>
+
+            <div id="changeMe" class="changeMe"></div>
+        </center>
+    </p>
+    <script>
+        let Username;
+        document.getElementById("mySubButton").onclick = function() {
+            Username= document.getElementById("MyText").value;
+            console.log(Username);
+
+           }
+
+
+
+
+         var button = document.querySelector("button");
+        var box = document.querySelector("#changeMe");
+        button.onclick = function changeColor(){
+            if(box.style.background == 'red'){
+                box.style.background = 'blue';
+            } else {
+                box.style.background = 'red';
+            }
+        }
+
+        console.log(`Welcome to web development`);
+        let name = "Steve";
+        let favourite_subject = "math";
+        let grade = "A+";
+        let age = "12";
+        let message = `Hello my name is ${name} and I am ${age}. My favourite subject is ${favourite_subject}, I got an ${grade} in ${favourite_subject}.`;
+    </script>
+</body>
+</html>

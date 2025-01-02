@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="Rounder"></h1>
+    <label>
+        Write a number
+    </label>
+    <input id="t-round">
+    <button id="submit">
+        submit
+    </button>
+    <script>
+       
+        let number;
+       
+        document.getElementById('submit').onclick = function () {
+            number = document.getElementById('t-round').value;
+
+            number=Number(number);
+
+        number = Math.round(number);
+
+            document.getElementById('Rounder').textContent = `${number}`;
+        }
+    </script>
+</body>
+
+</html>

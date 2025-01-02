@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="checker">Enter your age </h1>
+    <label>
+        Write your age
+    </label>
+    <input id="t_licence">
+    <button id="submit">
+        submit
+    </button>
+    <p id="textElement" style="font-size: 35px;"></p>
+    <script>
+        const t_licence = document.getElementById('t_licence')
+
+        const submit = document.getElementById('submit')
+
+        const textElement = document.getElementById('textElement')
+
+        let age;
+
+        let hasLicence = true;
+
+        submit.onclick = function(){
+
+            age = t_licence.value
+            age = Number(age);
+            
+
+            if (age >= 18) {
+                textElement.textContent = `You are old enough to drive a car`;
+
+                if (hasLicence) {
+                    textElement.textContent = `You have a driving licence`;
+                } else {
+                    textElement.textContent = `You  don't have a driving licence`;
+                }
+
+            }
+
+            else {
+                textElement.textContent = `you must be 16+,to get a car licence.`;
+            }
+        }
+    </script>
+</body>
+
+</html>

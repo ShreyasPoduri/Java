@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <h2 id="Welcome"></h2>
+    <label>Username</label>
+    <input type="text" id="myText">
+<button id="mySubButton">Submit</button>
+    <script>
+let username;
+document.getElementById("mySubButton").onclick=function(){
+    username=document.getElementById("myText").value;
+    document.getElementById("Welcome").textContent=`Welcome ${username}`;
+}
+    </script>
+</body>
+</html>

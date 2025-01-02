@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="your_age_in_a_year"></h1>
+    <label>
+        What is your age?
+    </label>
+    <input id="t-age">
+    <button id="submit">
+        submit
+    </button>
+    <script>
+        let age;
+        document.getElementById('submit').onclick = function () {
+            age = document.getElementById('t-age').value;
+            age=Number(age)
+            age+=1
+            document.getElementById('your_age_in_a_year').textContent=`Your age next year will be ${age}`;
+        }
+    </script>
+</body>
+
+</html>

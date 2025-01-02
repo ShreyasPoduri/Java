@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <label id="label">
+        write a number in each box
+    </label>
+    <input id="input_num1">
+   
+
+<br>
+<br>
+    <label id="label2">
+        write a number in each box
+    </label>
+    <input id="input_num2">
+    <br>
+    <br>
+    <center>
+    <button id="submit2">
+submit
+    </button>
+</center>
+    <p id="text_element">
+
+    </p>
+    <script>
+let num1;
+
+let num2;
+
+let sum;
+
+ document.getElementById("submit2").onclick=function addition(){
+    num1=document.getElementById("input_num1").value;
+num1=Number(num1)
+    num2=document.getElementById("input_num2").value;
+    num2=Number(num2)
+    sum=num1+num2;
+
+document.getElementById("text_element").textContent=`${sum}`;
+}
+    </script>
+</body>
+</html>
