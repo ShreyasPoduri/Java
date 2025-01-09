@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Write a Your grade</h1>
+    <h2>Your grade must be somewhere between 0 and 100</h2>
+    <input id="input_grade">
+    <button id="submit">
+        Check
+    </button>
+
+    <p id="TextElement"></p>
+    <script>
+
+        let TestScore;
+        let LetterGrade;
+
+        document.getElementById('submit').onclick = function () {
+            TestScore = document.getElementById('input_grade').value;
+
+            TestScore = Number(TestScore);
+
+            switch (true) {
+                case TestScore >= 90:
+                    LetterGrade = "A"
+                    break;
+
+                case TestScore >= 80:
+                    LetterGrade = "B"
+                    break;
+
+                case TestScore >= 70:
+                    LetterGrade = "c"
+                    break;
+
+                  case TestScore>=60:
+                   LetterGrade="D"
+                   break;
+
+                   case TestScore>=50:
+                   LetterGrade="E"
+                   break;
+
+                   default:LetterGrade="F"
+                   break;
+            }
+
+
+
+            document.getElementById('TextElement').textContent = ` You got ${TestScore} ,so your grade is ${LetterGrade}`;
+        }
+    </script>
+</body>
+
+</html>

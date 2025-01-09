@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Write a your <strong>full name!!</strong></h1>
+    <h2>Click on any of the the two buttons bellow the text input to find each part of your name</h2>
+
+
+
+    <center>
+        <input id="input_grade">
+        <br>
+        <br>
+        <button id="btn_first" style="margin-right: 20px;">Firstname</button>
+
+        <button id="btn_last">Lastname</button>
+    </center>
+
+    <p id="TextElement"></p>
+    <script>
+
+        let FirstName;
+
+        let LastName;
+
+        let Fullname;
+
+
+
+        document.getElementById('btn_first').onclick = function () {
+            Fullname = document.getElementById("input_grade").value;
+            
+
+            FirstName = Fullname.slice(0, Fullname.indexOf(" "));
+
+            LastName = Fullname.slice(Fullname.indexOf(" ") + 1);
+
+            document.getElementById('TextElement').textContent = ` You got First name is ${FirstName}`;
+
+            console.log(FirstName);
+
+        }
+
+        document.getElementById('btn_last').onclick = function () {
+            Fullname = document.getElementById("input_grade").value;
+
+            FirstName = Fullname.slice(0, Fullname.indexOf(" "));
+
+            LastName = Fullname.slice(Fullname.indexOf(" ") + 1);
+
+            document.getElementById('TextElement').textContent = ` You got last name is   ${LastName}`;
+
+            console.log(LastName);
+
+        }
+
+    </script>
+</body>
+
+</html>

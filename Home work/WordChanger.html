@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Write a <strong>word</strong></h1>
+    <h2>When you click on any of the four buttons it will change your word based on the button</h2>
+    <center>
+    <input id="input_word">
+    
+    <br>
+    <br>
+    
+        <button id="btn_Length">Length</button>
+        <button id="btn_Trim">Trim </button>
+        <button id="btn_Lowercase">All lowercase</button>
+        <button id="btn_Uppercase">All uppercase</button>
+   
+
+    <p id="TextElement"></p>
+</center>
+    <script>
+
+        
+        let text;
+
+        document.getElementById('btn_Length').onclick = function () {
+            text = document.getElementById('input_word').value;
+
+            document.getElementById('TextElement').textContent = text.length;
+        }
+
+        document.getElementById('btn_Trim').onclick = function () {
+            text = document.getElementById('input_word').value;
+
+            
+
+            document.getElementById('TextElement').textContent = `${text.trim()}`;
+        }
+
+        document.getElementById('btn_Lowercase').onclick = function () {
+            text = document.getElementById('input_word').value;
+
+            document.getElementById('TextElement').textContent = text.toLowerCase();
+        }
+
+        document.getElementById('btn_Uppercase').onclick = function () {
+            text = document.getElementById('input_word').value;
+
+            document.getElementById('TextElement').textContent = text.toUpperCase();
+        }
+    </script>
+</body>
+
+</html>

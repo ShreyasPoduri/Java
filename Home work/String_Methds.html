@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <center>
+        <h1>Write your name </h1>
+        <input id="input_name">
+        <button id="submit">
+            submit
+        </button>
+
+        <p id="textElement" style="font-size: 35px;"></p>
+    </center>
+    <script>
+        let name ;
+        name=document.getElementById("input_name").value;
+
+        console.log(name);
+        document.getElementById("submit").onclick = function () {
+            name = document.getElementById('input_name').value;
+ name=name.trim().charAt(0).toUpperCase()+name.trim().slice(1).toLowerCase();
+
+            document.getElementById("textElement").textContent = `your name is ${name}`;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

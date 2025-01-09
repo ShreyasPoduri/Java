@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body.dark{
+        background-color: black;
+
+        color: white;
+    }
+
+    button{display: block;
+    margin: 5px;}
+
+    .textElement{
+        margin-top: 12px;
+        margin-bottom: 15px;
+    }
+  </style>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>The Basement</h1>
+    <p id="story">I wanted to find my lost friend who was hiding in the dark basement!!</p>
+    <button onclick="TooDark()">Get into the basement!</button>
+    <div class="textElement">
+Type your name hear if you dare,  Muhahahahhahah
+
+<input id="name">
+    </div>
+
+
+</center>
+
+<p>Ahhhhhhhhhh,I heard a scream!!!!!
+    It was coming from the gates of the underworld.
+</p>
+<button onclick="Alert()">
+    Please dont click me
+        </button>
+
+        <button onclick="find()">
+Tell me where the half eaten zombie is!!
+        </button>\
+
+        <script>
+            function Alert(){
+                let username=document.getElementById("name").value
+
+                window.alert("I told you not to infect me with your stincky hands, I also know your name is " + username)
+            }
+
+            function TooDark(){
+                document.body.className="dark"
+                body.style.backgroundcolor="white"
+            }
+
+            function find(){
+                document.getElementById("story").textContent=`The half eaten zombie aka yuor friend was found playing with a baby troll.`
+            }
+        </script>
+</body>
+</html>
