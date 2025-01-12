@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        .rectangle {
+            border: 1px solid black;
+            height: 150px;
+            width: 200px;
+            margin: auto;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .button{
+            padding: 40px;
+            width:200px ;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<h2>
+    Make changes to the rectangle
+</h2>
+
+<div class="rectangle"></div>
+<center>
+<div class="buttons">
+    <button onclick="ChangeToCircle()">Change To  A  Circle</button>
+
+    <button onclick="hide()">Hide</button>
+
+    <button onclick="Show()">Show</button>
+
+    
+</div>
+</center>
+<script>
+let div=document.querySelector(".rectangle");
+
+function ChangeToCircle(){
+    div.style.borderRadius="100%";
+}
+function hide(){
+    div.style.display="none"
+}
+
+function Show(){
+    div.style.display="block"
+}
+
+div.onmouseenter= function(){
+    div.style.background="red"
+}
+
+div.onmouseout= function(){
+
+div.style.background="none"
+}
+</script>
+
+</body>
+
+</html>
