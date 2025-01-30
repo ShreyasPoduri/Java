@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="circum">Number Guessr</h1>
+
+    <h2>
+        Enter a number between 1 and 100
+    </h2>
+    <label>
+        Enter your guess
+    </label>
+    <input id="t-radius">
+    <button id="submit">
+        submit
+    </button>
+    <p id="textElement">
+
+    </p>
+
+    <p id="attempts">
+
+    </p>
+    <script>
+        const minNum = 1;
+
+        const maxNum = 100;
+
+        const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+        let attempts = 0;
+
+        let guess;
+
+        let running = true;
+
+
+
+
+
+        document.getElementById('submit').onclick = function () {
+            while (running) {
+                guess = document.getElementById("t-radius").value;
+                guess = Number(guess);
+                attempts = Number(attempts);
+
+                if (isNaN(guess)) {
+                    document.getElementById("textElement").textContent = `Please enter a number`
+                } else if (guess < minNum || guess > maxNum) {
+                    document.getElementById("textElement").textContent = `Please enter a valid number`
+                }
+                else {
+                    attempts++;
+                    if (guess < answer) {
+                        document.getElementById("textElement").textContent = ` Too low please try again!!`
+                    } else if (guess > answer) {
+                        document.getElementById("textElement").textContent = ` Too high please try again!!`
+                    }else{
+                        document.getElementById("textElement").textContent = ` Correct!!! The anwer was ${answer} it took you ${attempts} attempts to get it right`
+                        
+                    }
+                }
+                running = false;
+            }
+            document.getElementById("attempts").textContent = ` Attempts: ${attempts}`
+        }
+    </script>
+</body>
+
+</html>

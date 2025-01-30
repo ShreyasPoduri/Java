@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="circum"></h1>
+    <label>
+        Enter the number
+    </label>
+    <input id="t-radius">
+    <button id="submit">
+        submit
+    </button>
+    <p id="textElement"></p>
+    <script>
+
+        let number;
+
+        let counter=0;
+
+        document.getElementById('submit').onclick = function () {
+            number = document.getElementById('t-radius').value;
+            number = Number(number);
+            counter = Number(counter);
+
+
+
+            for (let i = 1; i <= number; i += 1) {
+
+
+                if (i == 1) {
+
+                }
+                else if (i == 2 || i == 3 || i == 5 || i == 7) {
+
+                    console.log(i);
+                    counter += 1;
+
+                } else if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
+
+                } else {
+                    console.log(i);
+                    counter += 1;
+                }
+
+
+
+
+            }
+            document.getElementById("textElement").textContent = `The total prime numbers are ${counter}`;
+
+        }
+    </script>
+</body>
+
+</html>

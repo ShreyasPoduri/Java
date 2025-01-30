@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="circum"></h1>
+    <label>
+        Enter the number
+    </label>
+    <input id="t-radius">
+    <button id="submit">
+        submit
+    </button>
+    <p id="textElement"></p>
+    <script>
+
+        let number;
+        console.log(number);
+        let result;
+        let finaleResult = "";
+        document.getElementById('submit').onclick = function () {
+            number = document.getElementById('t-radius').value;
+            number = Number(number);
+            result = Number(result);
+
+
+            for (let i = 1; i <= 10; i += 1) {
+                result = Number(i) * number;
+
+                finaleResult = finaleResult.concat(`${number}` + "x" + `${i}` + "=" + `${result}`);
+
+
+            }
+
+            console.log(finaleResult);
+            document.getElementById('textElement').textContent = `${finaleResult}`;
+        }
+    </script>
+</body>
+
+</html>
