@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+
+<body>
+    <h1>Multiplication website</h1>
+    <input type="text" id="text1">
+    <p>X</p>
+    <input type="text" id="text2">
+
+    <button onclick="submit()">Submit</button>
+<p id="textElement"></p>
+
+<script>
+
+    function submit(){
+        console.log("result");
+let num1=document.getElementById("text1").value;
+num1=Number(num1);
+let num2=document.getElementById("text2").value;
+num2=Number(num2);
+let result=num1*num2;
+
+document.getElementById("textElement").textContent=`${result} `;
+console.log(result);
+    }
+</script>
+
+</body>
+</html>
