@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        a {
+            text-decoration: none;
+            background-color: rgb(0, 251, 255);
+            margin: 20px;
+            border: 2px solid rgb(4, 142, 255);
+            border-radius: 5%;
+        }
+
+        nav {
+            background-color: rgb(1, 227, 227);
+        }
+
+        .Container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 550px;
+            width: 800px;
+
+        }
+
+        .MySlides{
+            height: 550px;
+            width: 800px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="">
+            Home
+        </a>
+
+        <a href="">
+            contact us
+        </a>
+    </nav>
+    <div class="Container">
+        <img src="airport.jpg" class="MySlides">
+        <img src="header.jpg" class="MySlides">
+        <img src="Lion.webp" class="MySlides">
+    </div>
+    <script>
+        let slideIndex = 0;
+        function changeSlides() {
+            const slides = document.getElementsByClassName("MySlides");
+            for (i = 0; i > slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex >= slide.length) {
+                slideIndex = 0;
+            }
+            slide[slideIndex].style.display = "block"
+
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+
+</html>
