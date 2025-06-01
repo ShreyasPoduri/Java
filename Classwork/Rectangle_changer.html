@@ -38,45 +38,41 @@
 </head>
 
 <body>
-<h2>
-    Make changes to the rectangle
-</h2>
 
-<div class="rectangle"></div>
-<center>
-<div class="buttons">
-    <button onclick="ChangeToCircle()">Change To  A  Circle</button>
-
-    <button onclick="hide()">Hide</button>
-
-    <button onclick="Show()">Show</button>
-
-    
-</div>
-</center>
 <script>
-let div=document.querySelector(".rectangle");
 
-function ChangeToCircle(){
-    div.style.borderRadius="100%";
-}
-function hide(){
-    div.style.display="none"
-}
+    var chioce = window.prompt("Welcome to area calculator. please enter your choice \n1 rectangle \n2triangle   \n 3 Circle \n4 parallelogram ")
 
-function Show(){
-    div.style.display="block"
+if (choice == "1"){
+    var lenght  = window.prompt("enter the lenght")
+    var breadth  = window.prompt("enter the breadth")
+    var result = Number(l) * Number(b)
+    alert = ("The area is" + result)
 }
 
-div.onmouseenter= function(){
-    div.style.background="red"
+if (choice == "2"){
+    var height  = window.prompt("enter the height")
+    var base  = window.prompt("enter the base")
+    var result = Number(height) * Number(base) /2
+    alert = ("The area is" + result)
 }
 
-div.onmouseout= function(){
 
-div.style.background="none"
+if (choice == "3"){
+    var radius = window.prompt("enter the radius")
+    var result = Number(radius) *2 *3.14
+    alert = ("The area is" + result)
+}
+
+if (choice == "4"){
+    var lenght  = window.prompt("enter the lenght")
+    var breadth  = window.prompt("enter the breadth")
+    var result = Number(l) * Number(b)
+    alert = ("The area is" + result)
 }
 </script>
+
+
 
 </body>
 
