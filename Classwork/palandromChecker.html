@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h2>Palindrome Checker</h2>
+    <input type="text" id="input">
+    <button id="Submit">Submit</button>
+    <p id="textElement"></p>
+
+    <script>
+        document.getElementById("Submit").onclick = function () {
+            var input = document.getElementById("input").value;
+            var reversedInput = input.split('').reverse().join('');
+
+            if (input === reversedInput) {
+                document.getElementById("textElement").textContent = `${input} is a palindrome`;
+            } else {
+                document.getElementById("textElement").textContent = `${input} is not a palindrome`;
+            }
+        };
+    </script>
+</body>
+</html>
